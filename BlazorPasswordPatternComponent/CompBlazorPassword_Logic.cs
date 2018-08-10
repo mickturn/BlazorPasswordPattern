@@ -14,10 +14,10 @@ namespace BlazorPasswordPatternComponent
     public class CompBlazorPassword_Logic : BlazorComponent
     {
         [Parameter]
-        public double CompWidth { get; set; }
+        private double CompWidth { get; set; }
 
         [Parameter]
-        public double CompHeight { get; set; }
+        private double CompHeight { get; set; }
 
 
         

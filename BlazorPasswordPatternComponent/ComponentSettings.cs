@@ -22,13 +22,7 @@ namespace BlazorPasswordPatternComponent
         public static int CountHorizontal { get; set; } = 3; //max 9
         public static int CountVertical { get; set; } = 3; //max 9
 
-
-        public static double radius_Origin { get; set; } = 0;
-        public static double radius_2_Times { get; set; } = 0;
-        //public static double radius_BigCircle { get; set; } = 0;
-        //public static double radius_SmallCircle { get; set; } = 0;
-        //public static double CircleWidth { get; set; } = 0;
-
+  
 
         public static string BG_Color { get; set; } = "#7FB0D3";
 
@@ -40,7 +34,7 @@ namespace BlazorPasswordPatternComponent
 
         public static List<string> SelectedCircles_List = new List<string>();
 
-        //public static string Text_Color { get; set; } = "green";
+       
 
     }
 }

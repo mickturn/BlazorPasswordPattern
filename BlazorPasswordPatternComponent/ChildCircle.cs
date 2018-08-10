@@ -14,10 +14,10 @@ namespace BlazorPasswordPatternComponent
     public class ChildCircle : BlazorComponent
     {
         [Parameter]
-        public double par_i { get; set; }
+        private double par_i { get; set; }
 
         [Parameter]
-        public double par_j { get; set; }
+        private double par_j { get; set; }
 
 
         [Parameter]
@@ -49,19 +49,6 @@ namespace BlazorPasswordPatternComponent
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
             g g1 = new g();
-
-            //g1.Children.Add(new rect
-            //{
-            //    //id = _id_rect,
-            //    x = par_i * ComponentSettings.w,
-            //    y = par_j * ComponentSettings.h,
-            //    width = ComponentSettings.w,
-            //    height = ComponentSettings.h,
-            //    fill = "red",
-            //    onclick = "notEmpty",
-            //    //CaptureRef = true,
-            //});
-
 
             string StrokeColor = ComponentSettings.BigCircle_Color;
 
@@ -100,8 +87,6 @@ namespace BlazorPasswordPatternComponent
 
             SvgHelper1.Cmd_Render(g1, 0, builder);
 
-
-
             base.BuildRenderTree(builder);
 
 
@@ -111,8 +96,11 @@ namespace BlazorPasswordPatternComponent
 
         protected override void OnAfterRender()
         {
-            //Dictionary<string, ElementRef> dict = SvgHelper1.Get_Dictionary();
+            SvgHelper1.ActionClicked = ComponentClicked;
 
+
+
+            //Dictionary<string, ElementRef> dict = SvgHelper1.Get_Dictionary();
 
             //if (!dict.TryGetValue(_id_rect, out element_rect))
             //{
@@ -126,19 +114,12 @@ namespace BlazorPasswordPatternComponent
             //{
             //    throw new Exception("shoud be captured element reference " + _id_smallCircle + "!");
             //}
-
-
-            SvgHelper1.ActionClicked = ComponentClicked;
         }
 
 
         public void ComponentClicked(UIMouseEventArgs e)
         {
             ActionClicked?.Invoke(_id);
-
-            //JsInterop.tmpAlert(element,HelloHelper1);
-
-            //StateHasChanged();
         }
 
 
