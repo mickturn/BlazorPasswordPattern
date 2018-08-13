@@ -49,6 +49,18 @@ namespace BlazorPasswordPatternComponent
             ComponentSettings.r = ComponentSettings.r * 0.65;
         }
 
+
+        protected override void OnAfterRender()
+        {
+
+            LocalData.Curr_comp = this;
+
+
+            base.OnAfterRender();
+        }
+
+
+
         public void Dispose()
         {
 
@@ -141,6 +153,119 @@ namespace BlazorPasswordPatternComponent
 
         }
 
+       
+      
+     
+    
+       
+      
+       
+       
+       
+      
+       
+
+        public void KeyUpFromJS1(int e)
+        {
+
+            ConsoleKey consoleKey = (ConsoleKey)Enum.Parse(typeof(ConsoleKey), e.ToString());
+
+            Console.WriteLine(consoleKey.ToString());
+
+            switch (consoleKey)
+            {
+                case ConsoleKey.D0:
+                    Reset();
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D1:
+                    Clicked("02");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D2:
+                    Clicked("12");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D3:
+                    Clicked("22");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D4:
+                    Clicked("01");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D5:
+                    Clicked("11");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D6:
+                    Clicked("21");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D7:
+                    Clicked("00");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D8:
+                    Clicked("10");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.D9:
+                    Clicked("20");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad0:
+                    Reset();
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad1:
+                    Clicked("02");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad2:
+                    Clicked("12");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad3:
+                    Clicked("22");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad4:
+                    Clicked("01");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad5:
+                    Clicked("11");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad6:
+                    Clicked("21");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad7:
+                    Clicked("00");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad8:
+                    Clicked("10");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.NumPad9:
+                    Clicked("20");
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.Escape:
+                    Reset();
+                    StateHasChanged();
+                    break;
+                case ConsoleKey.Backspace:
+                    UnselectLast();
+                    StateHasChanged();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 
 
