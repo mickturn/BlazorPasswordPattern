@@ -12,11 +12,12 @@ namespace BlazorPasswordPatternComponent
 
 
         [JSInvokable]
-        public static void KeyUpFromjs(int e)
+        public static Task<bool> KeyUpFromjs(int e)
         {
 
             Curr_comp.KeyUpFromJS1(e);
 
+            return Task.FromResult(true);
         }
     }
 }

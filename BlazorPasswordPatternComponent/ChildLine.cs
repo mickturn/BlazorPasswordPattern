@@ -17,7 +17,7 @@ namespace BlazorPasswordPatternComponent
         protected override void BuildRenderTree(RenderTreeBuilder builder)
         {
 
-            Console.WriteLine("abc");
+
 
             g g1 = new g();
 

@@ -72,7 +72,7 @@ namespace BlazorPasswordPatternComponent
             if (!ComponentSettings.SelectedCircles_List.Any(x => x == e))
             {
                 ComponentSettings.SelectedCircles_List.Add(e);
-                //Console.WriteLine("clicked " + e);
+           
                 UpdatePassword();
                 StateHasChanged();
                 ChildLine1.Update();
@@ -146,7 +146,7 @@ namespace BlazorPasswordPatternComponent
                
             }
 
-            Console.WriteLine(Password);
+ 
             PasswordUpdated?.Invoke();
 
 
@@ -170,8 +170,7 @@ namespace BlazorPasswordPatternComponent
 
             ConsoleKey consoleKey = (ConsoleKey)Enum.Parse(typeof(ConsoleKey), e.ToString());
 
-            Console.WriteLine(consoleKey.ToString());
-
+         
             switch (consoleKey)
             {
                 case ConsoleKey.D0:
