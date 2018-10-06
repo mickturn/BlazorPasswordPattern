@@ -3,10 +3,14 @@ document.onkeyup = function (evt) {
     evt = evt || window.event;
 
    
+    try {
+        DotNet.invokeMethodAsync('BlazorPasswordPatternComponent', 'KeyUpFromjs', evt.keyCode);
+    }
+    catch (err) {
 
-    DotNet.invokeMethodAsync('BlazorPasswordPatternComponent', 'KeyUpFromjs', evt.keyCode);
-
+    }
     
+
 
     try {
         DotNet.invokeMethodAsync('BlazorCalculatorComponent', 'KeyUpFromjs', evt.keyCode);

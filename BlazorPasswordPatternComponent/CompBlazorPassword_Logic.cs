@@ -153,17 +153,8 @@ namespace BlazorPasswordPatternComponent
 
         }
 
-       
-      
-     
-    
-       
-      
-       
-       
-       
-      
-       
+
+
 
         public void KeyUpFromJS1(int e)
         {
